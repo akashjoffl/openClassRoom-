@@ -1,14 +1,22 @@
-class Movie {
-    constructor (title, director, runtime, watched) {
-        this.title = title;
-        this.director = director;
-        this.runtime = runtime;
-        this.watched = watched;
+class Episode {
+    constructor(title, duration, hasBeenWatched) {
+      this.title = title;
+      this.duration = duration;
+      this.hasBeenWatched = hasBeenWatched;
     }
-}
-
-let firstMovie = new Movie ("Inception", "Nolan", 69, true);
-let secondMovie = new Movie ("STM", "Rajiv Menon", 140, false);
-
-console.log(firstMovie);
-console.log(secondMovie);
+  }
+  
+  let firstEpisode = new Episode('Dark Beginnings', 45, true);
+  let secondEpisode = new Episode('The Mystery Continues', 45, false);
+  let thirdEpisode = new Episode('An Unexpected Climax', 60, false);
+  
+  // Create your array here
+  // ======================================
+  
+  let episodes = [firstEpisode, secondEpisode, thirdEpisode]
+  
+  
+  // ======================================
+  
+  console.log(episodes);
+  
