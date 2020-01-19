@@ -10,13 +10,13 @@ class Episode {
   let secondEpisode = new Episode('The Mystery Continues', 45, false);
   let thirdEpisode = new Episode('An Unexpected Climax', 60, false);
   
-  // Create your array here
-  // ======================================
+  let episodes = [];
   
-  let episodes = [firstEpisode, secondEpisode, thirdEpisode]
+  episodes.push(firstEpisode, secondEpisode, thirdEpisode, thirdEpisode);
+  episodes.pop();
   
+  let numberOfEpisodes = episodes.length;
   
-  // ======================================
+  export { episodes, numberOfEpisodes };
   
-  console.log(episodes);
   
