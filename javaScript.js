@@ -1,31 +1,33 @@
-let firstUser = {
-    name: 'Will Alexander',
-    age: 33,
-    accountLevel: 'normal'
-};
+// const passengers = [
+//     'Will Alexander',
+//     'Sarah Kate',
+//     'Audrey Simon',
+//     'Tau Perkington'
+// ]
 
-let secondUser = {
-    name: 'Sarah Kate',
-    age: 21,
-    accountLevel: 'premium'
-};
+// for (let passenger of passengers) {
+//     console.log('Boarding passenger ' + passenger);
+// }
 
-let thirdUser = {
-    name: 'Audrey Simon',
-    age: 27,
-    accountLevel: 'mega-premium'
-};
+const passengers = [
+    {
+        name: 'Will Alexander',
+        ticketNumber: 209542
+    },
+    {
+        name: 'Sarah Kate',
+        ticketNumber: 169336
+    },
+    {
+        name: 'Audrey Simon',
+        ticketNumber: 779042
+    },
+    {
+        name: 'Tau Perkington',
+        ticketNumber: 703911
+    }
+]
 
-switch (firstUser.accountLevel) {
-    case 'normal':
-        console.log('You have a normal account!');
-        break;
-    case 'premium':
-        console.log('You have a premium account!');
-        break;
-    case 'mega-premium':
-        console.log('You have a mega premium account!');
-        break;
-    default:
-        console.log('Unknown account type!');
+for (let passenger of passengers) {
+    console.log('Boarding passenger ' + passenger.name + ' with ticket number ' + passenger.ticketNumber);
 }
