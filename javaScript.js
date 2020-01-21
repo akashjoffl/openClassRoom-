@@ -1,10 +1,9 @@
-const passengers = [
-    'Will Alexander',
-    'Sarah Kate',
-    'Audrey Simon',
-    'Tau Perkington'
-]
-
-for (let i of passengers) {
-    console.log('Boarding passenger ' + i);
-}
+let episodes = [
+    "James",
+    "Dower",
+    "Tark"
+    ]
+    
+    for (let i of episodes) {
+      i.hasBeenWatched = false;
+    }
