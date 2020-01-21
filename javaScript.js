@@ -5,6 +5,6 @@ const passengers = [
     'Tau Perkington'
 ]
 
-for (let i in passengers) {
-    console.log('Boarding passenger ' + passengers[i]);
+for (let i of passengers) {
+    console.log('Boarding passenger ' + i);
 }
