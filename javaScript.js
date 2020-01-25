@@ -1,8 +1,14 @@
-const add = (firstNumber, secondNumber) => {
-
-    const result = firstNumber + secondNumber;
+const calculateAverageRating = (ratings) => {
+    if (ratings.length === 0) {
+        return 0;
+    }
+    let sum = 0;
+    for (let rating of ratings) {
+        sum += rating;
+    }
+    const result = sum / ratings.length;
     return result;
-}
+  }
 
-console.log(add(4,3));
-console.log(add(2,9));
+  export { calculateAverageRating };
+  
