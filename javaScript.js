@@ -1,27 +1,26 @@
-const testSimpleWordCount = () => {
-    const testString = 'I have four words!';
-    if (getWordCount(testString) !== 4) {
-        console.error('Simple getWordCount failed!');
-    }
-}
+const commentToTest = {
+    content: '1',
+    subComments: [
+      { content: '1-A', subComments: [] },
+      { content: '1-B', subComments: [
+          { content: '1-B-a', subComments: [] }
+      ] },
+      { content: '1-C', subComments: [
+          { content: '1-C-a', subComments: [
+              { content: '1-C-a-i', subComments: [] },
+              { content: '1-C-a-ii', subComments: [] }
+          ] },
+          { content: '1-C-b', subComments: [] }
+      ] },
+      { content: '1-D', subComments: [] }
+    ] 
+  };
 
-const testEdgeWordCount = () => {
-    const testString = '             ';
-    if (getWordCount(testString) !== 0) {
-        console.error('Edge getWordCount failed!');
-    }
-}
 
-const testSimpleLetterCount = () => {
-    const testString = 'I have twenty one letters!';
-    if (getLetterCount(testString) !== 21) {
-        console.error('Simple getLetterCount failed!');
+  const getAllComments = (comment) => {
+    let allComments = comment.content;
+    for (let subComment of comment.subComments) {
+      allComments += '\n' + getAllComments(subComment);
     }
-}
-
-const testEdgeLetterCount = () => {
-    const testString = '")(&;//!!';
-    if (getLetterCount(testString) !== 0) {
-        console.error('Edge getLetterCount failed!');
-    }
-}
+    return allComments;
+  }
