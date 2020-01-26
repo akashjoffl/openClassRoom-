@@ -1,34 +1,22 @@
-const firstUser = {
-    name: "Akash",
-    online: true,
-    accountType: "normal"
+import { tau, meldrum, clara } from './database.js';
+
+const createShowComponents = (show) => {
+	const titleText = show.title;
+	const seasonsText = show.numberOfSeasons + ' seasons';
+	const episodesText = show.episodesPerSeason + ' episodes per season';
+	const Component = {
+		titleText: titleText,
+		seasonsText: seasonsText,
+		episodesText: episodesText
+    };
+    return Component;
 };
 
-const secondUser = {
-    name: "Sarah",
-    online: true,
-    accountType: "premium"
-}; 
-
-const thirdUser = {
-    name: "Haley",
-    online: true,
-    accountType: "pro"
-};
-
-const sendWelcomeMessageToUser = (user) => {
-    if (user.online) {
-        if (user.accountType === "normal") {
-            console.log("Hello " + user.name + "!");
-        } else if (user.accountType === "premium") {
-            console.log("Welcome premium user " + user.name + "!");
-        } else {
-            console.log("Welcome pro user " + user.name + "!");
-        }
-    }    
-}   
+const tauComponent = createShowComponents(tau);
+const meldrumComponent = createShowComponents(meldrum);
+const claraComponent = createShowComponents(clara);
 
 
-sendWelcomeMessageToUser(firstUser);
-sendWelcomeMessageToUser(secondUser);
-sendWelcomeMessageToUser(thirdUser);
+const showComponents = [ tauComponent, meldrumComponent, claraComponent ];
+
+export { showComponents };
