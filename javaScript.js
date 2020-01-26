@@ -1,28 +1,17 @@
-class BankAccount {
-    constructor(owner, balance) {
-        this.owner = owner;
-        this.balance = balance;
+class Show {
+    constructor(title, numberOfSeasons) {
+        this.title = title;
+        this.numberOfSeasons = numberOfSeasons;
+        this.ratings = [];    
+        this.averageORating = 0;    
     }
-    showBalance() {
-        console.log("Balance: " + this.balance + " LKR");
-    }
-    deposit(amount) {
-        console.log("Depositing " + amount + " LKR");
-        this.balance += amount;
-        this.showBalance();
-    }
-    withdraw(amount) {
-        if (amount > this.balance) {
-            console.log("Withdrawing denied!");
-        } else {
-            console.log("Withdrawing " + amount + " LKR");
-            this.balance -= amount;
-            this.showBalance();
+    addRating(rating) {
+        this.ratings.push(rating);    
+        let sum = 0;
+        for (let rating of this.ratings) {
+            sum += ratings;
         }
+        this.averageRating = sum / this.ratings.length;
     }
 }
 
-const newAccount = new BankAccount("Akash Jeganath", 500);
-
-newAccount.showBalance();
-newAccount.withdraw(50);
