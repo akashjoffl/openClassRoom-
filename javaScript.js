@@ -1,17 +1,15 @@
-class Show {
-    constructor(title, numberOfSeasons) {
-        this.title = title;
-        this.numberOfSeasons = numberOfSeasons;
-        this.ratings = [];    
-        this.averageORating = 0;    
+class BePolite {
+    static sayHello() {
+        console.log("Hello!")
     }
-    addRating(rating) {
-        this.ratings.push(rating);    
-        let sum = 0;
-        for (let rating of this.ratings) {
-            sum += ratings;
-        }
-        this.averageRating = sum / this.ratings.length;
+    static sayHelloTo(name) {
+        console.log("Hello " + name + "!")
+    }
+    static add (firstNumber, secondNumber) {
+        return firstNumber + secondNumber;
     }
 }
 
+BePolite.sayHello();
+BePolite.sayHelloTo("Akash");
+console.log(BePolite.add(5,4));
