@@ -1,14 +1,28 @@
-const calculateAverageRating = (ratings) => {
-    if (ratings.length === 0) {
-        return 0;
+class BankAccount {
+    constructor(owner, balance) {
+        this.owner = owner;
+        this.balance = balance;
     }
-    let sum = 0;
-    for (let rating of ratings) {
-        sum += rating;
+    showBalance() {
+        console.log("Balance: " + this.balance + " LKR");
     }
-    const result = sum / ratings.length;
-    return result;
-  }
+    deposit(amount) {
+        console.log("Depositing " + amount + " LKR");
+        this.balance += amount;
+        this.showBalance();
+    }
+    withdraw(amount) {
+        if (amount > this.balance) {
+            console.log("Withdrawing denied!");
+        } else {
+            console.log("Withdrawing " + amount + " LKR");
+            this.balance -= amount;
+            this.showBalance();
+        }
+    }
+}
 
-  export { calculateAverageRating };
-  
+const newAccount = new BankAccount("Akash Jeganath", 500);
+
+newAccount.showBalance();
+newAccount.withdraw(50);
