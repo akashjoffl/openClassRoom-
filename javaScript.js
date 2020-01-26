@@ -1,31 +1,27 @@
-const getWordCount = (stringToTest) => {
-    const wordArray = stringToTest.split(' ');
-    return wordArray.length;
-  }
-  
-  const getLetterCount = (stringToTest) => {
-    const wordArray = stringToTest.split(' ');
-    let totalLetters = 0;
-    for (let word of wordArray) {
-      // remove punctuation so as to only count letters
-      word.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, "");
-      totalLetters += word.length;
+const testSimpleWordCount = () => {
+    const testString = 'I have four words!';
+    if (getWordCount(testString) !== 4) {
+        console.error('Simple getWordCount failed!');
     }
-    return totalLetters;
-  }
-  
-  /*
-  ** returns average word length to 
-  ** two decimal places
-  */
-  const getAverageWordLength = (stringToTest) => {
-    return parseFloat((getLetterCount(stringToTest) / getWordCount(stringToTest)).toFixed(2));
-  }
-  
-  const printStringStats = (stringToTest) => {
-    console.log({
-      wordCount: getWordCount(stringToTest),
-      letterCount: getLetterCount(stringToTest),
-      averageWordLength: getAverageWordLength(stringToTest)
-    })
-  }
+}
+
+const testEdgeWordCount = () => {
+    const testString = '             ';
+    if (getWordCount(testString) !== 0) {
+        console.error('Edge getWordCount failed!');
+    }
+}
+
+const testSimpleLetterCount = () => {
+    const testString = 'I have twenty one letters!';
+    if (getLetterCount(testString) !== 21) {
+        console.error('Simple getLetterCount failed!');
+    }
+}
+
+const testEdgeLetterCount = () => {
+    const testString = '")(&;//!!';
+    if (getLetterCount(testString) !== 0) {
+        console.error('Edge getLetterCount failed!');
+    }
+}
