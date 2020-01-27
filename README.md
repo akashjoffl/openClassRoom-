@@ -22,3 +22,28 @@ https://openclassrooms.com/en/courses/5664271-learn-programming-with-javascript/
 
 * Different types of errors, and how to handle them.
 
+
+# Ending Note 🎉
+
+Congratulations on finishing a challenging course! You really have covered a lot of ground:
+
+1. The basic building blocks of an app
+
+> Variables, and their types
+> Objects and classes
+> Arrays and collections
+
+2. Programming logic
+
+> Conditional statements and loops
+> Errors and exception handling
+
+3. Best practices
+
+> How to write clean code
+> How to test and debug
+
+With everything you’ve learned here, you’re ready to take the next step in the world of JavaScript. You could look at the world of front end development, writing JavaScript for web and mobile app interfaces. You can also learn to code for the backend and build fully-fledged web servers and databases.
+
+Either way, I hope you’ve enjoyed following this course as much as I have enjoyed writing it. I wish you the best of luck for whatever’s next, and happy coding!
+
